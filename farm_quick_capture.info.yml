@@ -3,3 +3,5 @@ description: Provides a quick form for capturing photos and audio recordings.
 type: module
 package: farmOS Contrib
 core_version_requirement: ^11
+dependencies:
+  - farm_quick
