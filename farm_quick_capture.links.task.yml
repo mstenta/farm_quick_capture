@@ -1,0 +1,4 @@
+farm_quick_capture.files:
+  base_route: farm.quick.capture
+  route_name: view.farm_quick_capture_files.page
+  title: 'Files'
