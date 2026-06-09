@@ -14,6 +14,7 @@ use Drupal\farm_quick\Attribute\QuickForm;
 use Drupal\farm_quick\Plugin\QuickForm\QuickFormBase;
 use Drupal\farm_quick\Plugin\QuickForm\QuickFormInterface;
 use Drupal\file\FileInterface;
+use Drupal\file\FileUsage\FileUsageInterface;
 
 /**
  * Capture quick form.
@@ -36,6 +37,7 @@ class Capture extends QuickFormBase implements QuickFormInterface {
     EntityTypeManagerInterface $entity_type_manager,
     AccountInterface $current_user,
     protected FileSystemInterface $fileSystem,
+    protected FileUsageInterface $fileUsage,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_type_manager, $current_user);
   }
@@ -89,6 +91,9 @@ class Capture extends QuickFormBase implements QuickFormInterface {
         // Make the file permanent.
         $file->setPermanent();
         $file->save();
+
+        // Register file usage to this quick form.
+        $this->fileUsage->add($file, 'farm_quick_capture', 'quick_form', 'capture');
 
         // Add the file to the array.
         $files[] = $file;
