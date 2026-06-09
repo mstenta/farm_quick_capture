@@ -1,0 +1,21 @@
+{
+  "name": "drupal/farm_quick_capture",
+  "description": "Provides a quick form for capturing photos and audio recordings.",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/farm_quick_capture",
+  "license": "GPL-2.0-or-later",
+  "support": {
+      "docs": "https://farmOS.org/guide",
+      "forum": "https://farmOS.discourse.group",
+      "chat": "https://matrix.to/#/#farmOS:matrix.org"
+  },
+  "authors": [
+      {
+          "name": "Michael Stenta",
+          "email": "mike@farmier.com"
+      }
+  ],
+  "require": {
+      "farmos/farmos": "^4"
+  }
+}
