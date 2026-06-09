@@ -1,0 +1,5 @@
+farm_quick_capture:
+  manager_permissions:
+    - use farm_quick_capture
+  permission_callbacks:
+    - Drupal\farm_quick_capture\QuickCaptureAccess::permissions
